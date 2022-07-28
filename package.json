@@ -1,0 +1,7 @@
+{
+    "name": "fixAudioRender",
+    "version": "1.0.0",
+    "main": "index.js",
+    "author": "DecibillyJoel",
+    "description": "Sets Cider rendering device to the correct audio device"
+}

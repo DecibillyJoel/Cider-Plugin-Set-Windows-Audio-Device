@@ -1,0 +1,1 @@
+for /f "tokens=2" %%a in ('tasklist^|find /i "Cider.exe"') do (SoundVolumeView /SetAppDefault "VB-Audio VoiceMeeter AUX VAIO\Device\VoiceMeeter Aux Input\Render" all %%a)
