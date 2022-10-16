@@ -2,12 +2,6 @@
 
 const { spawn } = require("child_process");
 const path = require("path");
-
-function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
-const path__default = /*#__PURE__*/_interopDefaultLegacy(path);
-
-console.debug(path__default);
-
 class fixAudioRender {
     /**
      * Base Plugin Details (Eventually implemented into a GUI in settings)
@@ -39,7 +33,8 @@ class fixAudioRender {
      */
     callShell() {
         if (this.dutyCalls) {
-            spawn("cmd.exe", ["/C", path__default["default"].join(this.env.dir, "fixAudioRender.bat")]);
+            this.debug('Running fixAudioRender.bat from: '.concat(path.join(this.env.dir, "fixAudioRender.bat")));
+            spawn("cmd.exe", ["/C", path.join(this.env.dir, "fixAudioRender.bat")]);
             this.dutyCalls = false;
         }
     }
